@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/07 16:59:38 by plam              #+#    #+#             */
-/*   Updated: 2022/02/16 14:11:30 by plam             ###   ########.fr       */
+/*   Updated: 2022/02/16 14:22:34 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,14 +23,14 @@
 # include <sys/wait.h>
 # include <sys/errno.h>
 
-typedef		s_philosopher
+typedef	struct	s_philosopher
 {
 	int				alive;
 	int				lifetime;
 	int				hungry;
 	int				meal_nb;
 	pthread_mutex_t	fork;
-}			t_philo;
+}				t_philo;
 
 void	philo(int number_of_philosophers, int time_to_die, int time_to_sleep);
 
