@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/07 16:59:38 by plam              #+#    #+#             */
-/*   Updated: 2022/02/16 14:41:23 by plam             ###   ########.fr       */
+/*   Updated: 2022/02/26 22:50:10 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,7 @@ typedef	struct	s_philosopher
 	int				alive;
 	int				lifetime;
 	int				hungry;
+	int				sleeptime;
 	int				meal_nb;
 	pthread_mutex_t	l_fork;
 	pthread_mutex_t	r_fork;
