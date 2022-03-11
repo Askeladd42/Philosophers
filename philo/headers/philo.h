@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/07 16:59:38 by plam              #+#    #+#             */
-/*   Updated: 2022/03/11 12:32:40 by plam             ###   ########.fr       */
+/*   Updated: 2022/03/11 13:06:43 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,8 +46,9 @@ typedef struct	s_philo
 }				t_philo;
 
 
-int		init_philo(t_philo *philo);
-int		init_pthread(pthread_t *thread);
-void	philo(int number_of_philosophers, int time_to_die, int time_to_sleep);
+int			init_philo(t_philo *philo);
+int			init_pthread(pthread_t *thread);
+t_common	get_common_values(char	**av);
+void		philo(int number_of_philosophers, int time_to_die, int time_to_sleep);
 
 #endif
