@@ -6,12 +6,16 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/07 16:59:38 by plam              #+#    #+#             */
-/*   Updated: 2022/03/11 13:06:43 by plam             ###   ########.fr       */
+/*   Updated: 2022/03/14 20:38:40 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef PHILO_H
 # define PHILO_H
+
+# define TRUE 1
+# define FALSE 0
+# define ERR -1
 
 # include <stdio.h>
 # include <memory.h>
