@@ -6,11 +6,13 @@
 #    By: plam <plam@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/01/03 09:31:35 by plam              #+#    #+#              #
-#    Updated: 2022/02/07 16:52:46 by plam             ###   ########.fr        #
+#    Updated: 2022/03/14 22:37:53 by plam             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRCS		=	main.c
+SRCS		=	main.c		\
+				error.c		\
+				pthread.c
 
 MAKE		=	/bin/make
 
@@ -30,7 +32,7 @@ NAME_BONUS	=	philo_bonus
 
 RM			=	/bin/rm -f
 
-CC			=	/usr/bin/clang
+CC			=	/usr/bin/gcc
 
 CFLAGS		=	-g -Wall -Wextra -Werror -I $(HEADERS)
 
@@ -40,6 +42,10 @@ bonus:			$(NAME_BONUS)
 
 $(NAME):		$(OBJS)
 				$(CC) $(CFLAGS) $(OBJS) -o $(NAME)
+				@echo "\n\t\033[36;1m*-------------------------*"
+				@echo "\n\t* Compiling $(NAME) *\t \033[32;1m ------->>> \033[4;5mComplete !\033[0m"
+				@echo "\n\t\033[36;1m*-------------------------*\033[0m\n"
+
 
 $(NAME_BONUS):	$(OBJS_BONUS)
 				$(CC) $(CFLAGS) $(OBJS_BONUS) -o $(NAME_BONUS)
@@ -49,9 +55,11 @@ $(NAME_BONUS):	$(OBJS_BONUS)
 
 clean:
 				$(RM) $(OBJS) $(OBJS_BONUS)
+				@echo "\033[36;1m ------>> clean\033[0m"
 
 fclean:			clean
 				$(RM) $(NAME)
+				@echo "\033[36;1m ------>> fclean\033[0m"
 
 re:				fclean all
 
