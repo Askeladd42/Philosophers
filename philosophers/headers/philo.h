@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/07 16:59:38 by plam              #+#    #+#             */
-/*   Updated: 2022/03/15 14:41:47 by plam             ###   ########.fr       */
+/*   Updated: 2022/03/15 14:49:19 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,15 +29,21 @@
 
 # include "philo_utils.h"
 
+
+typedef struct s_fork
+{
+	pthread_mutex_t	m_fork;
+}				t_fork;
+
 typedef struct s_common
 {
 	int				alive;
-	long			lifetime;
-	long			hungry;
-	long			sleeptime;
-	long			meal_nb;
-	pthread_mutex_t	l_fork;
-	pthread_mutex_t	r_fork;
+	t_ms			lifetime;
+	t_ms			sleeptime;
+	struct timeval	last_meal;
+	long			nb_meal;
+	t_fork			l_fork;
+	t_fork			r_fork;
 
 }				t_common;
 
@@ -46,7 +52,7 @@ typedef struct s_rules
 	t_ms			eat_time;
 	t_ms			sleep_time;
 	t_ms			alive_time;
-	int				nb_meal;
+	long			nb_meal;
 	int				think_time;
 	pthread_mutex_t	m_print;
 }				t_rules;

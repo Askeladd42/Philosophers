@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/29 14:05:07 by plam              #+#    #+#             */
-/*   Updated: 2022/03/15 13:47:28 by plam             ###   ########.fr       */
+/*   Updated: 2022/03/15 15:01:21 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,5 +36,7 @@ long	ft_atol(const char *str)
 			return (0);
 		i++;
 	}
+	if (nb > LONG_MAX || nb < 0)
+		return (-1);
 	return (sign * nb);
 }
