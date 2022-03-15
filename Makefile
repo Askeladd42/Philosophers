@@ -6,7 +6,7 @@
 #    By: plam <plam@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/01/03 09:31:35 by plam              #+#    #+#              #
-#    Updated: 2022/03/14 22:37:53 by plam             ###   ########.fr        #
+#    Updated: 2022/03/15 16:44:40 by plam             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,15 +16,13 @@ SRCS		=	main.c		\
 
 MAKE		=	/bin/make
 
-PATH		=	srcs/
-
-PATH_BONUS	=	bonus/srcs/
+PATH		=	philosophers/srcs/
 
 OBJS		= 	$(addprefix $(PATH), $(SRCS:.c=.o))
 
 OBJS_BONUS	= 	$(addprefix $(PATH_BONUS), $(SRCS_BONUS:.c=.o))
 
-HEADERS		+=	headers/
+HEADERS		+=	philosophers/headers/
 
 NAME		=	philo
 
@@ -63,4 +61,4 @@ fclean:			clean
 
 re:				fclean all
 
-.PHONY:			all clean fclean re bonus
+.PHONY:			all clean fclean re
