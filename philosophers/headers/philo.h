@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/07 16:59:38 by plam              #+#    #+#             */
-/*   Updated: 2022/03/15 14:49:19 by plam             ###   ########.fr       */
+/*   Updated: 2022/03/15 21:34:39 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,7 +88,7 @@ void		free_table(t_table *table);
 int			set_rules(int ac, char **av, t_rules *rules);
 void		free_rules(t_rules *rules);
 
-int			init_philo(t_philo *philo);
+int			init_philo(t_table *table, t_rules *rules);
 int			init_pthread(pthread_t *thread);
 t_common	get_common_values(char	**av);
 void		philo(int number_of_philosophers, int time_to_die,
