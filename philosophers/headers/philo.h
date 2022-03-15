@@ -6,16 +6,19 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/07 16:59:38 by plam              #+#    #+#             */
-/*   Updated: 2022/03/15 21:59:44 by plam             ###   ########.fr       */
+/*   Updated: 2022/03/15 22:27:46 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef PHILO_H
 # define PHILO_H
 
-# define TRUE 1
-# define FALSE 0
+# define OK 1
+# define KO 0
 # define ERR -1
+
+# define MALLOC_ERR -2
+# define ARG_ERR -3
 
 # include <stdio.h>
 # include <memory.h>
@@ -94,7 +97,7 @@ void		free_rules(t_rules *rules);
 
 int			philo_err(int err, t_table *table);
 
-int			init_philo(t_table *table, t_rules *rules);
+int			set_table(t_table *table, t_rules *rules);
 int			init_pthread(pthread_t *thread);
 t_common	get_common_values(char	**av);
 void		philo(int number_of_philosophers, int time_to_die,
