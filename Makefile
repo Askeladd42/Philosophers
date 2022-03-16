@@ -6,7 +6,7 @@
 #    By: plam <plam@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/01/03 09:31:35 by plam              #+#    #+#              #
-#    Updated: 2022/03/17 00:22:21 by plam             ###   ########.fr        #
+#    Updated: 2022/03/17 00:22:58 by plam             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,6 +17,7 @@ SRCS		=	main.c	\
 				init/init_table.c\
 				init/init_table.c\
 				init/init_table.c\
+				time/set_time.c
 
 MAKE		=	/bin/make
 
