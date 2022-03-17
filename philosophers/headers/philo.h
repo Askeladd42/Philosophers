@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/07 16:59:38 by plam              #+#    #+#             */
-/*   Updated: 2022/03/17 00:20:05 by plam             ###   ########.fr       */
+/*   Updated: 2022/03/17 10:44:14 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,12 +26,13 @@
 # include <unistd.h>
 # include <string.h>
 # include <pthread.h>
-# include <time.h>
+# include <sys/time.h>
 # include <sys/wait.h>
 # include <sys/errno.h>
 
 # include "philo_utils.h"
 
+typedef long long t_ms;
 
 typedef struct s_fork
 {
