@@ -6,7 +6,7 @@
 #    By: plam <plam@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/01/03 09:31:35 by plam              #+#    #+#              #
-#    Updated: 2022/03/17 00:22:58 by plam             ###   ########.fr        #
+#    Updated: 2022/03/17 10:46:30 by plam             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,9 +14,11 @@ SRCS		=	main.c	\
 				errors/error.c	\
 				threads/pthread.c \
 				parsing/arg_parsing.c\
-				init/init_table.c\
-				init/init_table.c\
-				init/init_table.c\
+				init/set_table.c\
+				init/init_forks.c\
+				init/init_rules.c\
+				init/init_philo.c\
+				init/init_threads.c\
 				time/set_time.c
 
 MAKE		=	/bin/make
