@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/17 16:38:01 by plam              #+#    #+#             */
-/*   Updated: 2022/03/17 16:45:12 by plam             ###   ########.fr       */
+/*   Updated: 2022/03/17 16:45:49 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,7 @@ void	ms_sleep(t_ms waiting_time, t_rules *rules)
 		cnt++;
 		if (cnt == 5000)
 		{
+			//put a function to control the rules here
 			cnt = 0;
 		}
 		usleep(100);
