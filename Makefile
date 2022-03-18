@@ -6,20 +6,21 @@
 #    By: plam <plam@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/01/03 09:31:35 by plam              #+#    #+#              #
-#    Updated: 2022/03/17 10:46:30 by plam             ###   ########.fr        #
+#    Updated: 2022/03/18 16:52:56 by plam             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRCS		=	main.c	\
-				errors/error.c	\
-				threads/pthread.c \
-				parsing/arg_parsing.c\
-				init/set_table.c\
+SRCS		+=	init/set_table.c\
 				init/init_forks.c\
 				init/init_rules.c\
 				init/init_philo.c\
 				init/init_threads.c\
-				time/set_time.c
+
+SRCS		+=	main.c	\
+				time/set_time.c\
+				errors/error.c	\
+				threads/pthread.c \
+				parsing/arg_parsing.c
 
 MAKE		=	/bin/make
 

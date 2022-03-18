@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/16 23:44:28 by plam              #+#    #+#             */
-/*   Updated: 2022/03/17 00:05:04 by plam             ###   ########.fr       */
+/*   Updated: 2022/03/18 17:23:32 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,10 +34,10 @@ int	set_rules(int ac, char **av, t_rules *rules)
 		if (nb_meal < 1)
 			return (ERR);
 	}
-	rules->alive_time = ft_atol(av[2]);
-	rules->eat_time = ft_atol(av[3]);
-	rules->sleep_time = ft_atol(av[4]);
-	rules->nb_meal = nb_meal;
+	rules->alive_time = (t_ms)ft_atol(av[2]);
+	rules->eat_time = (t_ms)ft_atol(av[3]);
+	rules->sleep_time = (t_ms)ft_atol(av[4]);
+	rules->nb_meal = (t_ms)nb_meal;
 	rules->think_time = OK;
 	if (pthread_mutex_init(&rules->m_print, NULL) != 0)
 		return (ERR);
