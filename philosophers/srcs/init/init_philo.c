@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/15 21:36:23 by plam              #+#    #+#             */
-/*   Updated: 2022/03/19 01:02:19 by plam             ###   ########.fr       */
+/*   Updated: 2022/03/19 17:40:13 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ t_philo	init_philo(int id, t_rules *rules, t_fork *left, t_fork *right)
 	philo.alive = OK;
 	philo.l_fork = left;
 	philo.r_fork = right;
-	philo.status = OK; // maybe replace by a e_num for the status
+	philo.status = IS_THINKING;
 	philo.rules = rules;
 	philo.last_meal.tv_sec = 0;
 	philo.last_meal.tv_usec = 0;

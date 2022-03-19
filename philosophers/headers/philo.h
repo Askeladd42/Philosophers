@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/07 16:59:38 by plam              #+#    #+#             */
-/*   Updated: 2022/03/19 13:13:19 by plam             ###   ########.fr       */
+/*   Updated: 2022/03/19 17:41:33 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,7 @@ e_num	e_status
 	TAKE_FORK,
 	IS_EATING,
 	IS_SLEEPING,
+	IS_THINKING,
 	IS_DEAD,
 	FINISHED_EATING,
 };
