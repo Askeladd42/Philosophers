@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/07 16:59:38 by plam              #+#    #+#             */
-/*   Updated: 2022/03/19 00:57:31 by plam             ###   ########.fr       */
+/*   Updated: 2022/03/19 12:52:10 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -93,12 +93,28 @@ void		free_rules(t_rules *rules);
 int			philo_err(int err, t_table *table);
 
 /*
+** time functions
+*/
+
+t_ms		set_time(struct timeval *time);
+t_ms		get_diff_time(struct timeval begin, struct timeval end);
+void		ms_sleep(t_ms waiting_time, t_rules *rules);
+
+/*
+**philo structure functions
+*/
+
+t_philo		*malloc_philos(int nb_philo, t_rules *rules, t_fork *forks);
+t_philo		*init_philo_mutex(t_philo *philo, int nb_philo);
+void		free_philos(t_philo *philo, int nb_philo);
+
+/*
 ** routine functions
 */
 
 int			arg_parsing(int ac, char **av, t_table *table, t_rules *rules);
 int			init_pthread(pthread_t *thread);
-t_common	get_common_values(char	**av);
+t_philo		get_common_values(char	**av);
 void		philo(int number_of_philosophers, int time_to_die,
 				int time_to_sleep);
 
