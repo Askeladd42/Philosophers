@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/07 16:59:38 by plam              #+#    #+#             */
-/*   Updated: 2022/03/19 17:41:33 by plam             ###   ########.fr       */
+/*   Updated: 2022/03/19 17:43:01 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@
 
 # include "philo_utils.h"
 
-e_num	e_status
+enum	e_status
 {
 	TAKE_FORK,
 	IS_EATING,
