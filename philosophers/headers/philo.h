@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/07 16:59:38 by plam              #+#    #+#             */
-/*   Updated: 2022/03/17 10:44:14 by plam             ###   ########.fr       */
+/*   Updated: 2022/03/19 00:57:31 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,24 +32,26 @@
 
 # include "philo_utils.h"
 
-typedef long long t_ms;
+typedef long long	t_ms;
 
 typedef struct s_fork
 {
 	pthread_mutex_t	m_fork;
 }				t_fork;
 
-typedef struct s_common
+typedef struct s_philo
 {
+	int				id;
 	int				alive;
-	t_ms			lifetime;
-	t_ms			sleeptime;
-	struct timeval	last_meal;
+	int				status;
 	long			nb_meal;
-	t_fork			l_fork;
-	t_fork			r_fork;
-
-}				t_common;
+	struct timeval	last_meal;
+	t_rules			*rules;
+	t_fork			*l_fork;
+	t_fork			*r_fork;
+	pthread_t		thrd_id;
+	pthread_mutex_t	m_status;
+}				t_philo;
 
 typedef struct s_rules
 {
@@ -60,15 +62,6 @@ typedef struct s_rules
 	int				think_time;
 	pthread_mutex_t	m_print;
 }				t_rules;
-
-typedef struct s_philo
-{
-	int				id;
-	pthread_mutex_t	mutex;
-	pthread_t		thread;
-	struct s_philo	*next;
-	struct s_philo	*first;
-}				t_philo;
 
 typedef struct s_table
 {

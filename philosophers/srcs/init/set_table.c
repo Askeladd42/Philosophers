@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/15 22:25:02 by plam              #+#    #+#             */
-/*   Updated: 2022/03/15 22:48:17 by plam             ###   ########.fr       */
+/*   Updated: 2022/03/19 01:00:01 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ int	set_table(char **av, t_table *table, t_rules *rules)
 
 void	free_table(t_table *table)
 {
-	sleep(1);		//to replace with another function correctly later
+	sleep(1);	//to replace with another function correctly later
 	if (table)
 	{
 		if (table->rules)

@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/15 14:57:03 by plam              #+#    #+#             */
-/*   Updated: 2022/03/17 16:37:11 by plam             ###   ########.fr       */
+/*   Updated: 2022/03/19 01:01:15 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 ** "dividing" it by 1000 to have it in ms.
 */
 
-t_ms	set_time(struct timeval	time)
+t_ms	set_time(struct timeval time)
 {
 	gettimeofday(&time, NULL);
 	return (time.tv_sec * 1000 + time.tv_usec / 1000.0);
