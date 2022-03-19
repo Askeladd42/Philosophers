@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/07 16:59:38 by plam              #+#    #+#             */
-/*   Updated: 2022/03/19 12:52:10 by plam             ###   ########.fr       */
+/*   Updated: 2022/03/19 13:13:19 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@
 
 # define MALLOC_ERR -2
 # define ARG_ERR -3
+# define INIT_THRD_ERR -4
 
 # include <stdio.h>
 # include <memory.h>
@@ -31,6 +32,15 @@
 # include <sys/errno.h>
 
 # include "philo_utils.h"
+
+e_num	e_status
+{
+	TAKE_FORK,
+	IS_EATING,
+	IS_SLEEPING,
+	IS_DEAD,
+	FINISHED_EATING,
+};
 
 typedef long long	t_ms;
 
