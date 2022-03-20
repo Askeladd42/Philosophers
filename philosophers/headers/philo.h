@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/07 16:59:38 by plam              #+#    #+#             */
-/*   Updated: 2022/03/19 17:43:01 by plam             ###   ########.fr       */
+/*   Updated: 2022/03/20 23:04:33 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,7 +70,8 @@ typedef struct s_rules
 	t_ms			sleep_time;
 	t_ms			alive_time;
 	long			nb_meal;
-	int				think_time;
+	int				can_write;
+	struct timeval	start;
 	pthread_mutex_t	m_print;
 }				t_rules;
 
@@ -123,8 +124,15 @@ void		free_philos(t_philo *philo, int nb_philo);
 ** routine functions
 */
 
+static void sleeping_routine(t_philo *philo);
+static void thinking_routine(t_philo *philo);
+void	eat_routine_odd(t_philo *philo);
+void	eat_routine_even(t_philo *philo);
+
+void		*routine(void *philos);
+
 int			arg_parsing(int ac, char **av, t_table *table, t_rules *rules);
-int			init_pthread(pthread_t *thread);
+int			create_ph_thrd(t_philo *philo);
 t_philo		get_common_values(char	**av);
 void		philo(int number_of_philosophers, int time_to_die,
 				int time_to_sleep);

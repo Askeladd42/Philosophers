@@ -6,13 +6,13 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/17 10:46:39 by plam              #+#    #+#             */
-/*   Updated: 2022/03/17 10:47:27 by plam             ###   ########.fr       */
+/*   Updated: 2022/03/20 22:11:47 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "philo.h"
 
-void	free_threads()
+int	create_ph_thrd(t_philo *philo)
 {
-
+	if (pthread_create(&philo->thrd_id, NULL, &routine, philo) != 0)
 }

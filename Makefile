@@ -6,7 +6,7 @@
 #    By: plam <plam@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/01/03 09:31:35 by plam              #+#    #+#              #
-#    Updated: 2022/03/18 16:52:56 by plam             ###   ########.fr        #
+#    Updated: 2022/03/20 22:59:37 by plam             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,6 +15,10 @@ SRCS		+=	init/set_table.c\
 				init/init_rules.c\
 				init/init_philo.c\
 				init/init_threads.c\
+
+SRCS		+=	routine/chk_routine.c\
+				routine/eat_routine.c\
+				routine/gen_routine.c
 
 SRCS		+=	main.c	\
 				time/set_time.c\
