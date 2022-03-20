@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/07 16:59:38 by plam              #+#    #+#             */
-/*   Updated: 2022/03/20 23:04:33 by plam             ###   ########.fr       */
+/*   Updated: 2022/03/21 00:13:29 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -124,10 +124,17 @@ void		free_philos(t_philo *philo, int nb_philo);
 ** routine functions
 */
 
-static void sleeping_routine(t_philo *philo);
-static void thinking_routine(t_philo *philo);
+static void	begin_time_init(t_rules *rules, t_philo *philo, int nb_philo);
+int			start_it(int nb_philo, t_philo *philo);
+void		stop_it(t_philo *philo, int nb_philo);
+static int	last_meal_or_dead(t_philo *philo, int nb_philo, int max_eat,
+			t_ms alive_time);
+
+static void	sleeping_routine(t_philo *philo);
+static void	thinking_routine(t_philo *philo);
 void	eat_routine_odd(t_philo *philo);
 void	eat_routine_even(t_philo *philo);
+
 
 void		*routine(void *philos);
 
