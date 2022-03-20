@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/07 16:59:38 by plam              #+#    #+#             */
-/*   Updated: 2022/03/21 00:13:29 by plam             ###   ########.fr       */
+/*   Updated: 2022/03/21 00:27:10 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -119,27 +119,24 @@ void		ms_sleep(t_ms waiting_time, t_rules *rules);
 t_philo		*malloc_philos(int nb_philo, t_rules *rules, t_fork *forks);
 t_philo		*init_philo_mutex(t_philo *philo, int nb_philo);
 void		free_philos(t_philo *philo, int nb_philo);
+int			create_ph_thrd(t_philo *philo);
+void		join_ph_thrd(t_philo *philo, int nb_philo);
 
 /*
 ** routine functions
 */
 
-static void	begin_time_init(t_rules *rules, t_philo *philo, int nb_philo);
-int			start_it(int nb_philo, t_philo *philo);
-void		stop_it(t_philo *philo, int nb_philo);
-static int	last_meal_or_dead(t_philo *philo, int nb_philo, int max_eat,
-			t_ms alive_time);
-
 static void	sleeping_routine(t_philo *philo);
 static void	thinking_routine(t_philo *philo);
-void	eat_routine_odd(t_philo *philo);
-void	eat_routine_even(t_philo *philo);
-
-
+void		eat_routine_odd(t_philo *philo);
+void		eat_routine_even(t_philo *philo);
 void		*routine(void *philos);
 
+int			start_project(t_table *table, t_rules *rules, t_philo *philo,
+				int nb_philo);
 int			arg_parsing(int ac, char **av, t_table *table, t_rules *rules);
 int			create_ph_thrd(t_philo *philo);
+void		join_ph_thrd(t_philo *philo, int nb_philo);
 t_philo		get_common_values(char	**av);
 void		philo(int number_of_philosophers, int time_to_die,
 				int time_to_sleep);
