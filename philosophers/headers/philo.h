@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/07 16:59:38 by plam              #+#    #+#             */
-/*   Updated: 2022/03/21 00:27:10 by plam             ###   ########.fr       */
+/*   Updated: 2022/03/22 00:14:34 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -132,12 +132,14 @@ void		eat_routine_odd(t_philo *philo);
 void		eat_routine_even(t_philo *philo);
 void		*routine(void *philos);
 
+void		change_status(t_philo *philo, int status);
+int			can_write(t_rules *rules);
+static void	write_status(t_ms time, int id, int status);
+void		print_status(t_philo *philo, int status, t_rules *rules);
+
 int			start_project(t_table *table, t_rules *rules, t_philo *philo,
 				int nb_philo);
 int			arg_parsing(int ac, char **av, t_table *table, t_rules *rules);
-int			create_ph_thrd(t_philo *philo);
-void		join_ph_thrd(t_philo *philo, int nb_philo);
-t_philo		get_common_values(char	**av);
 void		philo(int number_of_philosophers, int time_to_die,
 				int time_to_sleep);
 
