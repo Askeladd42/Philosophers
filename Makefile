@@ -6,9 +6,13 @@
 #    By: plam <plam@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/01/03 09:31:35 by plam              #+#    #+#              #
-#    Updated: 2022/03/20 22:59:37 by plam             ###   ########.fr        #
+#    Updated: 2022/03/21 23:50:06 by plam             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
+
+SRCS		+=	utils/ft_atol.c\
+				utils/ft_memset.c\
+				utils/ft_isdigit.c
 
 SRCS		+=	init/set_table.c\
 				init/init_forks.c\
@@ -16,14 +20,17 @@ SRCS		+=	init/set_table.c\
 				init/init_philo.c\
 				init/init_threads.c\
 
+				routine/print_funcs.c\
 SRCS		+=	routine/chk_routine.c\
 				routine/eat_routine.c\
 				routine/gen_routine.c
 
-SRCS		+=	main.c	\
-				time/set_time.c\
-				errors/error.c	\
-				threads/pthread.c \
+SRCS		+=	time/ms_sleep.c\
+				time/set_time.c
+
+SRCS		+=	main.c\
+				errors/error.c\
+				threads/pthread.c\
 				parsing/arg_parsing.c
 
 MAKE		=	/bin/make
