@@ -6,7 +6,7 @@
 #    By: plam <plam@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/01/03 09:31:35 by plam              #+#    #+#              #
-#    Updated: 2022/03/23 14:44:19 by plam             ###   ########.fr        #
+#    Updated: 2022/03/23 15:05:12 by plam             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -72,11 +72,11 @@ $(NAME_BONUS):	$(OBJS_BONUS)
 
 clean:
 				$(RM) $(OBJS) $(OBJS_BONUS)
-				@echo "\033[36;1m ------>> clean\033[0m"
+				@echo "\033[36;1m ------>>	clean\033[0m"
 
 fclean:			clean
 				$(RM) $(NAME)
-				@echo "\033[36;1m ------>> fclean\033[0m"
+				@echo "\033[36;1m ------>>	fclean\033[0m"
 
 re:				fclean all
 
