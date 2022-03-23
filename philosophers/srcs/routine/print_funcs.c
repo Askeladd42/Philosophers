@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/19 09:47:54 by plam              #+#    #+#             */
-/*   Updated: 2022/03/22 00:16:26 by plam             ###   ########.fr       */
+/*   Updated: 2022/03/23 14:07:21 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,8 +49,12 @@ int		can_write(t_rules *rules)
 
 static void	write_status(t_ms time, int id, int status)
 {
+	static char	*str_status[5] = {
+		" has taken a fork\n", " is eating\n", " is sleeping\n",
+		" is thinking\n", " died\n",
+	};
 	//use printf correctly to print the status of the thread
-	printf("", );
+	printf("%lld %d %s\n", time, id, str_status[status]);
 }
 
 /*
