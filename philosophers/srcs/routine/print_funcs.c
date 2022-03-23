@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/19 09:47:54 by plam              #+#    #+#             */
-/*   Updated: 2022/03/23 14:07:21 by plam             ###   ########.fr       */
+/*   Updated: 2022/03/23 14:10:05 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ void	change_status(t_philo *philo, int status)
 	pthread_mutex_unlock(&philo->m_status);
 }
 
-int		can_write(t_rules *rules)
+int	can_write(t_rules *rules)
 {
 	if (&rules)
 		return (OK);
@@ -53,7 +53,7 @@ static void	write_status(t_ms time, int id, int status)
 		" has taken a fork\n", " is eating\n", " is sleeping\n",
 		" is thinking\n", " died\n",
 	};
-	//use printf correctly to print the status of the thread
+	
 	printf("%lld %d %s\n", time, id, str_status[status]);
 }
 
