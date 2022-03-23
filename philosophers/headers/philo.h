@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/07 16:59:38 by plam              #+#    #+#             */
-/*   Updated: 2022/03/22 00:14:34 by plam             ###   ########.fr       */
+/*   Updated: 2022/03/23 22:48:05 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -140,7 +140,5 @@ void		print_status(t_philo *philo, int status, t_rules *rules);
 int			start_project(t_table *table, t_rules *rules, t_philo *philo,
 				int nb_philo);
 int			arg_parsing(int ac, char **av, t_table *table, t_rules *rules);
-void		philo(int number_of_philosophers, int time_to_die,
-				int time_to_sleep);
 
 #endif
