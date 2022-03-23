@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/07 16:59:38 by plam              #+#    #+#             */
-/*   Updated: 2022/03/23 22:48:05 by plam             ###   ########.fr       */
+/*   Updated: 2022/03/23 22:52:59 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -103,6 +103,13 @@ void		free_rules(t_rules *rules);
 */
 
 int			philo_err(int err, t_table *table);
+
+/*
+** fork usage functions
+*/
+
+t_fork	*malloc_forks(int nb_philo);
+void	free_forks(t_fork *forks, int nb_philo);
 
 /*
 ** time functions

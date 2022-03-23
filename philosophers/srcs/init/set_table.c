@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/15 22:25:02 by plam              #+#    #+#             */
-/*   Updated: 2022/03/23 14:16:54 by plam             ###   ########.fr       */
+/*   Updated: 2022/03/23 22:54:19 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ void	free_table(t_table *table)
 		if (table->philos)
 			free_philos(table->philos, table->nb_philo);
 		if (table->forks)
-			free_forks(table->forks);
+			free_forks(table->forks, table->nb_philo);
 		table->nb_philo = 0;
 	}
 }
