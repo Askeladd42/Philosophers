@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/20 22:40:40 by plam              #+#    #+#             */
-/*   Updated: 2022/03/20 22:59:00 by plam             ###   ########.fr       */
+/*   Updated: 2022/03/29 16:06:10 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,17 +17,17 @@ static void	drop_fork(t_fork *fork)
 	pthread_mutex_unlock(&fork->m_fork);
 }
 
-static void	take_fork(t_fork *fork)
+static void	take_fork(t_philo *philo, t_fork *fork)
 {
 	pthread_mutex_lock(&fork->m_fork);
-	print_status(philo, TAKEN_FORK, philo->rules);
+	print_status(philo, TAKE_FORK, philo->rules);
 }
 
 static void	meal_ready(t_philo *philo)
 {
 	change_status(philo, IS_EATING);
-	print_status(philo, IS_EATING, philo_rules);
-	ms_sleep(philo->rules->time_to_eat, philo->rules);
+	print_status(philo, IS_EATING, philo->rules);
+	ms_sleep(philo->rules->eat_time, philo->rules);
 }
 
 /*

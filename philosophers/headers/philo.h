@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/07 16:59:38 by plam              #+#    #+#             */
-/*   Updated: 2022/03/29 14:17:21 by plam             ###   ########.fr       */
+/*   Updated: 2022/03/29 16:16:11 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -114,7 +114,7 @@ void		free_forks(t_fork *forks, int nb_philo);
 ** time functions
 */
 
-t_ms		set_time(struct timeval *time);
+t_ms		set_time(struct timeval time);
 t_ms		get_diff_time(struct timeval begin, struct timeval end);
 void		ms_sleep(t_ms waiting_time, t_rules *rules);
 

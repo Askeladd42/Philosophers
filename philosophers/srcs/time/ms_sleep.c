@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/17 16:38:01 by plam              #+#    #+#             */
-/*   Updated: 2022/03/21 23:57:12 by plam             ###   ########.fr       */
+/*   Updated: 2022/03/29 16:17:50 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,9 @@ void	ms_sleep(t_ms waiting_time, t_rules *rules)
 	int				cnt;
 
 	cnt = 0;
-	stop_time = get_time(time_now) + waiting_time;
-	while (get_time(time_now) - stop_time < 0)
+	gettimeofday(&time_now, NULL);
+	stop_time = set_time(time_now) + waiting_time;
+	while (set_time(time_now) - stop_time < 0)
 	{
 		cnt++;
 		if (cnt == 5000)

@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/20 22:13:58 by plam              #+#    #+#             */
-/*   Updated: 2022/03/21 00:13:22 by plam             ###   ########.fr       */
+/*   Updated: 2022/03/29 16:12:12 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,9 +60,9 @@ void	*routine(void *philos)
 		if (status == IS_THINKING)
 		{
 			if (even_odd == 0)
-				eating_routine(philo);
+				eat_routine_even(philo);
 			else
-				eating_routine(philo);
+				eat_routine_odd(philo);
 		}
 		else if (status == IS_EATING)
 			sleeping_routine(philo);
