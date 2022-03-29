@@ -6,7 +6,7 @@
 #    By: plam <plam@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/01/03 09:31:35 by plam              #+#    #+#              #
-#    Updated: 2022/03/23 23:23:25 by plam             ###   ########.fr        #
+#    Updated: 2022/03/29 14:11:06 by plam             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -49,7 +49,7 @@ NAME_BONUS	=	philo_bonus
 
 RM			=	/bin/rm -f
 
-CC			=	/usr/bin/gcc
+CC			=	/usr/bin/clang
 
 CFLAGS		=	-g -Wall -Wextra -Werror -I $(HEADERS)
 

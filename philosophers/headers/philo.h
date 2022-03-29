@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/07 16:59:38 by plam              #+#    #+#             */
-/*   Updated: 2022/03/23 23:36:40 by plam             ###   ########.fr       */
+/*   Updated: 2022/03/29 14:17:21 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,6 +50,17 @@ typedef struct s_fork
 	pthread_mutex_t	m_fork;
 }				t_fork;
 
+typedef struct s_rules
+{
+	t_ms			eat_time;
+	t_ms			sleep_time;
+	t_ms			alive_time;
+	long			nb_meal;
+	int				can_write;
+	struct timeval	start;
+	pthread_mutex_t	m_print;
+}				t_rules;
+
 typedef struct s_philo
 {
 	int				id;
@@ -63,17 +74,6 @@ typedef struct s_philo
 	pthread_t		thrd_id;
 	pthread_mutex_t	m_status;
 }				t_philo;
-
-typedef struct s_rules
-{
-	t_ms			eat_time;
-	t_ms			sleep_time;
-	t_ms			alive_time;
-	long			nb_meal;
-	int				can_write;
-	struct timeval	start;
-	pthread_mutex_t	m_print;
-}				t_rules;
 
 typedef struct s_table
 {
@@ -94,7 +94,6 @@ void		free_table(t_table *table);
 ** rules functions
 */
 
-static int	check_rules(t_rules *rules);
 int			set_rules(int ac, char **av, t_rules *rules);
 void		free_rules(t_rules *rules);
 
@@ -133,15 +132,12 @@ void		join_ph_thrd(t_philo *philo, int nb_philo);
 ** routine functions
 */
 
-static void	sleeping_routine(t_philo *philo);
-static void	thinking_routine(t_philo *philo);
 void		eat_routine_odd(t_philo *philo);
 void		eat_routine_even(t_philo *philo);
 void		*routine(void *philos);
 
 void		change_status(t_philo *philo, int status);
 int			can_write(t_rules *rules);
-static void	write_status(t_ms time, int id, int status);
 void		print_status(t_philo *philo, int status, t_rules *rules);
 
 int			start_project(t_table *table, t_rules *rules, t_philo *philo,
