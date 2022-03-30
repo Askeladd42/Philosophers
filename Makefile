@@ -6,7 +6,7 @@
 #    By: plam <plam@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/01/03 09:31:35 by plam              #+#    #+#              #
-#    Updated: 2022/03/29 14:23:37 by plam             ###   ########.fr        #
+#    Updated: 2022/03/31 00:07:43 by plam             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,12 +25,11 @@ SRCS		+=	routine/print_funcs.c\
 				routine/eat_routine.c\
 				routine/gen_routine.c
 
-SRCS		+=	time/ms_sleep.c\
+SRCS		+=	time/timestamp.c\
 				time/set_time.c
 
 SRCS		+=	main.c\
 				errors/error.c\
-				threads/pthread.c\
 				parsing/arg_parsing.c
 
 MAKE		=	/bin/make

@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/20 22:13:58 by plam              #+#    #+#             */
-/*   Updated: 2022/03/29 16:12:12 by plam             ###   ########.fr       */
+/*   Updated: 2022/03/31 00:08:51 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ static void	sleeping_routine(t_philo *philo)
 {
 	change_status(philo, IS_SLEEPING);
 	print_status(philo, IS_SLEEPING, philo->rules);
-	ms_sleep(philo->rules->sleep_time, philo->rules);
+	timestamp(philo->rules->sleep_time, philo->rules);
 }
 
 static void	thinking_routine(t_philo *philo)

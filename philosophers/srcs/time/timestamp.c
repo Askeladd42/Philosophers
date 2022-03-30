@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ms_sleep.c                                         :+:      :+:    :+:   */
+/*   timestamp.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/17 16:38:01 by plam              #+#    #+#             */
-/*   Updated: 2022/03/29 16:17:50 by plam             ###   ########.fr       */
+/*   Updated: 2022/03/31 00:07:15 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "philo.h"
 
-void	ms_sleep(t_ms waiting_time, t_rules *rules)
+void	timestamp(t_ms waiting_time, t_rules *rules)
 {
 	struct timeval	time_now;
 	t_ms			stop_time;

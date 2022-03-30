@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/15 21:36:23 by plam              #+#    #+#             */
-/*   Updated: 2022/03/29 14:19:30 by plam             ###   ########.fr       */
+/*   Updated: 2022/03/31 00:19:08 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,7 +70,7 @@ void	free_philos(t_philo *philos, int nb_philo)
 {
 	if (philos)
 	{
-		join_ph_thrd(philos, nb_philo);
+		join_thrd(philos, nb_philo);
 		while (nb_philo--)
 			pthread_mutex_destroy(&(philos + nb_philo)->m_status);
 		free(philos);

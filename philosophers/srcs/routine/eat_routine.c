@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/20 22:40:40 by plam              #+#    #+#             */
-/*   Updated: 2022/03/29 16:06:10 by plam             ###   ########.fr       */
+/*   Updated: 2022/03/31 00:08:51 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ static void	meal_ready(t_philo *philo)
 {
 	change_status(philo, IS_EATING);
 	print_status(philo, IS_EATING, philo->rules);
-	ms_sleep(philo->rules->eat_time, philo->rules);
+	timestamp(philo->rules->eat_time, philo->rules);
 }
 
 /*

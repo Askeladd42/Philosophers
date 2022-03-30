@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/19 09:44:16 by plam              #+#    #+#             */
-/*   Updated: 2022/03/21 00:22:03 by plam             ###   ########.fr       */
+/*   Updated: 2022/03/31 00:08:51 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -99,7 +99,7 @@ int	start_project(t_table *table, t_rules *rules, t_philo *philo, int nb_philo)
 		return (philo_err(INIT_THRD_ERR, table));
 	while (last_meal_or_dead(philo, nb_philo, rules->nb_meal,
 			rules->alive_time) == KO)
-		ms_sleep(1, NULL);
+		timestamp(1, NULL);
 	stop_it(philo, nb_philo);
 	return (OK);
 }
