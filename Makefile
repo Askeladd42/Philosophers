@@ -6,7 +6,7 @@
 #    By: plam <plam@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/01/03 09:31:35 by plam              #+#    #+#              #
-#    Updated: 2022/03/31 00:07:43 by plam             ###   ########.fr        #
+#    Updated: 2022/03/31 14:56:42 by plam             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -50,7 +50,7 @@ RM			=	/bin/rm -f
 
 CC			=	/usr/bin/clang
 
-CFLAGS		=	-g -Wall -Wextra -Werror -I $(HEADERS)
+CFLAGS		=	-g -Wall -Wextra -Werror -I $(HEADERS) -pthread
 
 all:			$(NAME)
 

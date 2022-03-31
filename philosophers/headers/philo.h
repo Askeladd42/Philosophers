@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/07 16:59:38 by plam              #+#    #+#             */
-/*   Updated: 2022/03/31 00:19:08 by plam             ###   ########.fr       */
+/*   Updated: 2022/03/31 14:53:55 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,10 +23,10 @@
 
 # include <stdio.h>
 # include <memory.h>
+# include <pthread.h>
 # include <stdlib.h>
 # include <unistd.h>
 # include <string.h>
-# include <pthread.h>
 # include <sys/time.h>
 # include <sys/wait.h>
 # include <sys/errno.h>
