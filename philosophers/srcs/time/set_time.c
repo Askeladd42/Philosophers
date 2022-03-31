@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/15 14:57:03 by plam              #+#    #+#             */
-/*   Updated: 2022/03/29 16:15:29 by plam             ###   ########.fr       */
+/*   Updated: 2022/03/31 15:35:49 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,6 @@
 
 t_ms	set_time(struct timeval time)
 {
-	gettimeofday(&time, NULL);
 	return (time.tv_sec * 1000 + time.tv_usec / 1000.0);
 }
 
