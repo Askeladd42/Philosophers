@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/15 21:39:37 by plam              #+#    #+#             */
-/*   Updated: 2022/03/15 22:11:40 by plam             ###   ########.fr       */
+/*   Updated: 2022/04/04 13:24:56 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ int	philo_err(int err, t_table *table)
 		printf("Error : Malloc problem returned NULL\n");
 	if (err == ARG_ERR)
 		printf("Error : Arguments not well formated\n");
+	if (err == INIT_THRD_ERR)
+		printf("Error : Fail to create a pthread\n");
 	if (table)
 		free_table(table);
 	return (ERR);

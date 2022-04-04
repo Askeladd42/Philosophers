@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/16 23:44:28 by plam              #+#    #+#             */
-/*   Updated: 2022/03/29 14:18:10 by plam             ###   ########.fr       */
+/*   Updated: 2022/04/04 14:18:20 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,11 +23,33 @@ static int	check_rules(t_rules *rules)
 	return (OK);
 }
 
+static int	only_digits(int ac, char **av)
+{
+	int	i;
+	int	j;
+
+	i = 1;
+	while (i < ac)
+	{
+		j = 0;
+		while (av[i][j])
+		{
+			if (ft_isdigit(av[i][j]) == 0)
+				return (ERR);
+			j++;
+		}
+		i++;
+	}
+	return (OK);
+}
+
 int	set_rules(int ac, char **av, t_rules *rules)
 {
 	int	nb_meal;
 
 	nb_meal = -1;
+	if (only_digits(ac, av) == ERR)
+		return (ERR);
 	if (ac == 6)
 	{
 		nb_meal = ft_atol(av[5]);

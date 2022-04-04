@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/16 23:59:48 by plam              #+#    #+#             */
-/*   Updated: 2022/03/31 00:09:58 by plam             ###   ########.fr       */
+/*   Updated: 2022/04/04 13:45:06 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,8 @@
 
 int	arg_parsing(int ac, char **av, t_table *table, t_rules *rules)
 {
-	if (set_rules(ac, av, rules) == ERR
+	if (ac < 5 || ac > 6 
+		|| set_rules(ac, av, rules) == ERR
 		|| set_table(av, table, rules) == ERR)
 		return (philo_err(ARG_ERR, NULL));
 	table->forks = malloc_forks(table->nb_philo);
