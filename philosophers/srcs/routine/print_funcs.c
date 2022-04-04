@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/19 09:47:54 by plam              #+#    #+#             */
-/*   Updated: 2022/03/29 16:01:08 by plam             ###   ########.fr       */
+/*   Updated: 2022/04/04 17:24:54 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,7 +54,7 @@ static void	write_status(t_ms time, int id, int status)
 		" is thinking\n", " died\n",
 	};
 
-	printf("%lld %d %s\n", time, id, str_status[status]);
+	printf("%lld %d %s", time, id, str_status[status]);
 }
 
 /*
