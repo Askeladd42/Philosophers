@@ -6,7 +6,7 @@
 #    By: plam <plam@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/01/03 09:31:35 by plam              #+#    #+#              #
-#    Updated: 2022/03/31 15:17:05 by plam             ###   ########.fr        #
+#    Updated: 2022/04/04 14:51:25 by plam             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -58,9 +58,9 @@ bonus:			$(NAME_BONUS)
 
 $(NAME):		$(OBJS)
 				$(CC) $(CFLAGS) $(OBJS) -o $(NAME)
-				@echo "\n\t\033[36;1m*-------------------------*"
-				@echo "\n\t* Compiling $(NAME) *\t \033[32;1m ------->>> \033[4;5mComplete !\033[0m"
-				@echo "\n\t\033[36;1m*-------------------------*\033[0m\n"
+				@echo "*-------------------------*"
+				@echo "* Compiling $(NAME) * ------->>> Complete !"
+				@echo "*-------------------------*"
 
 
 $(NAME_BONUS):	$(OBJS_BONUS)
@@ -71,11 +71,11 @@ $(NAME_BONUS):	$(OBJS_BONUS)
 
 clean:
 				$(RM) $(OBJS) $(OBJS_BONUS)
-				@echo "\033[36;1m ------>>	clean\033[0m"
+				@echo "------>>	clean"
 
 fclean:			clean
 				$(RM) $(NAME)
-				@echo "\033[36;1m ------>>	fclean\033[0m"
+				@echo " ------>>	fclean"
 
 re:				fclean all
 

@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/16 23:44:28 by plam              #+#    #+#             */
-/*   Updated: 2022/04/04 14:18:20 by plam             ###   ########.fr       */
+/*   Updated: 2022/04/04 14:49:19 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ static int	check_rules(t_rules *rules)
 	return (OK);
 }
 
-static int	only_digits(int ac, char **av)
+int	only_digits(int ac, char **av)
 {
 	int	i;
 	int	j;

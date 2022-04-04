@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/07 16:59:38 by plam              #+#    #+#             */
-/*   Updated: 2022/03/31 14:53:55 by plam             ###   ########.fr       */
+/*   Updated: 2022/04/04 14:48:58 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,7 +87,7 @@ typedef struct s_table
 ** table functions
 */
 
-int			set_table(char **av, t_table *table, t_rules *rules);
+int			set_table(int ac, char **av, t_table *table, t_rules *rules);
 void		free_table(t_table *table);
 
 /*
@@ -143,5 +143,6 @@ void		print_status(t_philo *philo, int status, t_rules *rules);
 int			start_project(t_table *table, t_rules *rules, t_philo *philo,
 				int nb_philo);
 int			arg_parsing(int ac, char **av, t_table *table, t_rules *rules);
+int			only_digits(int ac, char **av);
 
 #endif
