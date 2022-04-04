@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/17 10:46:39 by plam              #+#    #+#             */
-/*   Updated: 2022/04/04 16:02:25 by plam             ###   ########.fr       */
+/*   Updated: 2022/04/04 16:27:39 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,10 +38,7 @@ void	join_thrd(t_philo *philo, int nb_philo)
 	while (i < nb_philo)
 	{
 		if (philo->thrd_id != 0)
-		{
-			printf("%lu\n", (philo + i)->thrd_id);
 			pthread_join((philo + i)->thrd_id, NULL);
-		}
 		i++;
 	}
 }
