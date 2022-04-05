@@ -6,7 +6,7 @@
 #    By: plam <plam@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/01/03 09:31:35 by plam              #+#    #+#              #
-#    Updated: 2022/04/04 14:51:25 by plam             ###   ########.fr        #
+#    Updated: 2022/04/05 14:05:08 by plam             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -71,10 +71,11 @@ $(NAME_BONUS):	$(OBJS_BONUS)
 
 clean:
 				$(RM) $(OBJS) $(OBJS_BONUS)
-				@echo "------>>	clean"
+				@echo "------>>	cleaning .o files"
 
 fclean:			clean
 				$(RM) $(NAME)
+				@echo "* Deleting $(NAME) * ------->>> Complete !"
 				@echo " ------>>	fclean"
 
 re:				fclean all
