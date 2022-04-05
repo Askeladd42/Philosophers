@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/15 21:36:23 by plam              #+#    #+#             */
-/*   Updated: 2022/03/31 00:19:08 by plam             ###   ########.fr       */
+/*   Updated: 2022/04/05 14:15:08 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,7 @@ t_philo	init_philo(int id, t_rules *rules, t_fork *left, t_fork *right)
 	philo.last_meal.tv_usec = 0;
 	philo.nb_meal = 0;
 	philo.thrd_id = 0;
+	printf("Philosopher %d initialized !\n", id);
 	return (philo);
 }
 
@@ -62,6 +63,7 @@ t_philo	*malloc_philos(int nb_philo, t_rules *rules, t_fork *forks)
 	while (i < nb_philo)
 	{
 		philos[i] = init_philo((i + 1), rules, (forks + i - 1), (forks + i));
+		i++;
 	}
 	return (init_philo_mutex(philos, nb_philo));
 }
