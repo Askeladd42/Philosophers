@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/19 09:44:16 by plam              #+#    #+#             */
-/*   Updated: 2022/04/05 15:09:54 by plam             ###   ########.fr       */
+/*   Updated: 2022/04/06 12:33:44 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,8 +36,17 @@ int	start_it(int nb_philo, t_philo *philo)
 	i = 0;
 	while (i < nb_philo)
 	{
-		if (create_ph_thrd(philo + i) == ERR)
-			return (ERR);
+		if (!(i % 2))
+		{
+			if (create_ph_thrd(philo + i) == ERR)
+				return (ERR);
+		}
+		else
+		{
+			timestamp(5, philo->rules);
+			if (create_ph_thrd(philo + i) == ERR)
+				return (ERR);
+		}
 		i++;
 	}
 	return (OK);
@@ -97,6 +106,8 @@ int	start_project(t_table *table, t_rules *rules, t_philo *philo, int nb_philo)
 	while (last_meal_or_dead(philo, nb_philo, rules->nb_meal,
 			rules->alive_time) == KO)
 		timestamp(1, NULL);
+	for (int i = 0; i < nb_philo; i++)
+		printf("Philo %d meal eaten : %ld\n", philo[i].id, philo[i].nb_meal);
 	stop_it(philo, nb_philo);
 	return (OK);
 }
