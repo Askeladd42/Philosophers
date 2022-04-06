@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/19 09:44:16 by plam              #+#    #+#             */
-/*   Updated: 2022/04/06 12:33:44 by plam             ###   ########.fr       */
+/*   Updated: 2022/04/06 15:23:39 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,13 +41,17 @@ int	start_it(int nb_philo, t_philo *philo)
 			if (create_ph_thrd(philo + i) == ERR)
 				return (ERR);
 		}
-		else
+		i += 2;
+	}
+	i = 1;
+	while (i < nb_philo)
+	{
+		if ((i % 2))
 		{
-			timestamp(5, philo->rules);
 			if (create_ph_thrd(philo + i) == ERR)
 				return (ERR);
 		}
-		i++;
+		i += 2;
 	}
 	return (OK);
 }

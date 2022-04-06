@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/19 09:47:54 by plam              #+#    #+#             */
-/*   Updated: 2022/04/04 17:24:54 by plam             ###   ########.fr       */
+/*   Updated: 2022/04/06 13:09:13 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,7 @@ static void	write_status(t_ms time, int id, int status)
 {
 	static char	*str_status[5] = {
 		" has taken a fork\n", " is eating\n", " is sleeping\n",
-		" is thinking\n", " died\n",
+		" is thinking\n", "died\n",
 	};
 
 	printf("%lld %d %s", time, id, str_status[status]);
