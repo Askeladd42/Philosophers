@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/20 22:13:58 by plam              #+#    #+#             */
-/*   Updated: 2022/03/31 00:08:51 by plam             ###   ########.fr       */
+/*   Updated: 2022/04/07 12:17:08 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,13 @@ static int	get_status(t_philo *philo)
 	pthread_mutex_unlock(&philo->m_status);
 	return (status);
 }
+
+/* New case spotted : if eat_time > sleeping_time & nb_philo is odd,
+** a fork can have a issue between an even and the next philo it can use
+** example : case of ./philo 3 310 110 100
+** Hint : add this case by putting a timestamp for the IS_THINKING at this
+** moment to the even philo at this moment.
+*/
 
 static void	sleeping_routine(t_philo *philo)
 {
